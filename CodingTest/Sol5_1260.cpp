@@ -17,6 +17,7 @@ void DFS(vector<int> graph[MAX], vector<bool>& visit, int v)
 	while (!(st.empty()))
 	{
 		int current = st.top();
+		st.pop();
 
 		if (visit[current - 1] == false)
 		{
@@ -24,11 +25,10 @@ void DFS(vector<int> graph[MAX], vector<bool>& visit, int v)
 			visit[current - 1] = true;
 		}
 
-		st.pop();
-
 		for (int i = graph[current - 1].size() - 1; i >= 0; i--)
 			if (visit[graph[current - 1][i] - 1] == false)
 				st.push(graph[current - 1][i]);
+
 	}
 
 	visit.clear();
@@ -39,22 +39,21 @@ void BFS(vector<int> graph[MAX], vector<bool>& visit, int v)
 	queue<int> q;
 
 	q.push(v);
+	visit[v - 1] = true;
 
 	while (!(q.empty()))
 	{
 		int current = q.front();
-
-		if (visit[current - 1] == false)
-		{
-			cout << current << " ";
-			visit[current - 1] = true;
-		}
-
 		q.pop();
+
+		cout << current << " ";
 
 		for (int i = 0; i < graph[current - 1].size(); i++)
 			if (visit[graph[current - 1][i] - 1] == false)
+			{
 				q.push(graph[current - 1][i]);
+				visit[graph[current - 1][i] - 1] = true;
+			}
 	}
 
 	visit.clear();
