@@ -24,16 +24,19 @@
     <ClCompile Include="Sol4_1911.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Sol5_2164.cpp">
+    <ClCompile Include="Sol5_1260.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Sol6_1260.cpp">
+    <ClCompile Include="Sol6_2164.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Sol7_3190.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Sol1_2309.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Sol8_7562.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
