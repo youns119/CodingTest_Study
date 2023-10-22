@@ -21,37 +21,37 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\CodingTest_Study\Q01_2309.cpp">
+    <ClCompile Include="Q01_2309.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
-    <ClCompile Include="..\CodingTest_Study\Q02_2217.cpp">
+    <ClCompile Include="Q02_2217.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
-    <ClCompile Include="..\CodingTest_Study\Q03_1149.cpp">
+    <ClCompile Include="Q03_1149.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
-    <ClCompile Include="..\CodingTest_Study\Q04_1911.cpp">
+    <ClCompile Include="Q04_1911.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
-    <ClCompile Include="..\CodingTest_Study\Q05_1260.cpp">
+    <ClCompile Include="Q05_1260.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
-    <ClCompile Include="..\CodingTest_Study\Q06_2164.cpp">
+    <ClCompile Include="Q06_2164.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
-    <ClCompile Include="..\CodingTest_Study\Q07_3190.cpp">
+    <ClCompile Include="Q07_3190.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
-    <ClCompile Include="..\CodingTest_Study\Q08_7562.cpp">
+    <ClCompile Include="Q08_7562.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
-    <ClCompile Include="..\CodingTest_Study\Q09_9663.cpp">
+    <ClCompile Include="Q09_9663.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
-    <ClCompile Include="..\CodingTest_Study\Q10_1992.cpp">
+    <ClCompile Include="Q10_1992.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
-    <ClCompile Include="..\CodingTest_Study\Q11_2910.cpp">
+    <ClCompile Include="Q11_2910.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
   </ItemGroup>
