@@ -54,5 +54,8 @@
     <ClCompile Include="Q11_2910.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
+    <ClCompile Include="Q01_42626.cpp">
+      <Filter>소스 파일\Programmers</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
