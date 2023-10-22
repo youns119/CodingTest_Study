@@ -21,9 +21,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Q11_2910.cpp">
-      <Filter>소스 파일\BOJ</Filter>
-    </ClCompile>
     <ClCompile Include="..\CodingTest_Study\Q01_2309.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
@@ -52,6 +49,9 @@
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
     <ClCompile Include="..\CodingTest_Study\Q10_1992.cpp">
+      <Filter>소스 파일\BOJ</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CodingTest_Study\Q11_2910.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
   </ItemGroup>

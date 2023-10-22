@@ -49,7 +49,7 @@
     <ClCompile Include="..\CodingTest_Study\Q10_1992.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Q11_2910.cpp" />
+    <ClCompile Include="..\CodingTest_Study\Q11_2910.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
