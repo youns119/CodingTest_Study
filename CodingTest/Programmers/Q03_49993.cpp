@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <queue>
 
 using namespace std;
 
@@ -29,18 +30,19 @@ int main()
 int solution(string skill, vector<string> skill_trees)
 {
 	int answer = 0;
-	int order = 0;
-	bool flag = false;
 	map<char, int> m;
 
 	for (int i = 0; i < skill.length(); i++)
 		m[skill[i]] = i;
 
-	for (int i = 0; i < skill_trees.size(); i++)
+	for (auto tree : skill_trees)
 	{
-		for (int j = 0; j < skill_trees[i].length(); j++)
+		int order = 0;
+		bool flag = false;
+ 
+		for (auto skill : tree)
 		{
-			auto it = m.find(skill_trees[i][j]);
+			auto it = m.find(skill);
 
 			if (it != m.end())
 			{
@@ -54,12 +56,8 @@ int solution(string skill, vector<string> skill_trees)
 			}
 		}
 
-		if (flag)
-			flag = false;
-		else
+		if (!flag)
 			answer++;
-
-		order = 0;
 	}
 
 	return answer;
