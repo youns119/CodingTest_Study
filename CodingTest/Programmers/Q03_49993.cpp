@@ -62,3 +62,5 @@ int solution(string skill, vector<string> skill_trees)
 
 	return answer;
 }
+
+// string의 find를 찾는 더 간단한 방법도 있었다
