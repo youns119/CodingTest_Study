@@ -72,5 +72,8 @@
     <ClCompile Include="Programmers\Q05_92341.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Programmers\Q06_42747.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
