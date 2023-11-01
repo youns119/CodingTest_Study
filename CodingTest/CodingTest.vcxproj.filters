@@ -78,7 +78,7 @@
     <ClCompile Include="BOJ\Q13_11052.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Algospot\Q01_TRIANGLEPATH.cpp">
+    <ClCompile Include="BOJ\Q14_2156.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
