@@ -23,12 +23,10 @@ int main()
 void Count(string s, int& R, int& B)
 {
 	for (auto c : s)
-	{
 		if (c == 'R')
 			R++;
-		else
-			B++;
-	}
+
+	B = s.length() - R;
 }
 
 int Ball_Sub(string s, int num, char color)
