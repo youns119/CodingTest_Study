@@ -57,6 +57,7 @@ bool Input(vector<vector<int>>& rupee, int& MAX)
 void Init(vector<vector<int>>& rupee, int& MAX)
 {
 	rupee.clear();
+	// 벡터의 capacity를 완전 초기화하는 방법은 clear 뒤에 shrink_to_fit하는게 가장 깔끔하다
 	rupee.shrink_to_fit();
 
 	MAX = 0;
