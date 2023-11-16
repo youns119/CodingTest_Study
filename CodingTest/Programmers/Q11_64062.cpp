@@ -50,7 +50,6 @@ bool Count(vector<int>& stones, int k, int M)
 
 int solution(vector<int> stones, int k)
 {
-	int answer = 0;
 	int L = *min_element(stones.begin(), stones.end());
 	int R = *max_element(stones.begin(), stones.end());
 	
@@ -62,5 +61,5 @@ int solution(vector<int> stones, int k)
 		else					 R = M - 1;
 	}
 
-	return answer;
+	return L;
 }
