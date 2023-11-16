@@ -66,6 +66,7 @@ int solution(vector<int> stones, int k)
 
 // 처음에 개인적으로 해보려고 시도했던 접근법. 
 // 슬라이딩 윈도우로 구현했으며 속도도 이진탐색과 차이가 나지 않을 정도로 빠르다
+// https://yabmoons.tistory.com/632
 //int solution(vector<int> stones, int k)
 //{
 //	int answer = 987654321;
