@@ -84,7 +84,8 @@ vector<ll> solution(vector<ll> numbers)
 
 // 속도는 마찬가지로 다른 풀이들과 비슷하지만 가장 비트연산을 잘 활용한 방법
 // 어떻게 생각해 냈는지도 모르겠고 이해하기도 힘들다... 
-//vector<long long> solution(vector<long long> numbers) {
+//vector<long long> solution(vector<long long> numbers) 
+//{
 //	vector<long long> answer;
 //	for (ll& n : numbers) {
 //		ll idx = (~n & -~n);
