@@ -66,7 +66,7 @@ vector<ll> solution(vector<ll> numbers)
 	return answer;
 }
 
-// 속도는 내가 위의 풀이와 비슷
+// 속도는 위의 풀이와 비슷
 // 하지만 코드가 더 간결하다
 //vector<long long> solution(vector<long long> numbers) 
 //{
