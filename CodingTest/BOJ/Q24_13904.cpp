@@ -58,3 +58,43 @@ int solution(vector<pair<int, int>>& hw)
 
 	return result;
 }
+
+// 우선순위 큐를 사용한 방법
+// 우선순위 큐를 쓰면 vector를 sort해서 쓸 필요가 없다
+//#include <iostream>
+//#include <queue>
+//#include <algorithm>
+//using namespace std;
+//
+//int N;
+//priority_queue<pair<int, int >> pq;
+//bool is_visit[1002];
+//
+//int cnt;
+//int main()
+//{
+//	ios_base::sync_with_stdio(false);
+//	cin.tie(NULL); cout.tie(NULL);
+//
+//	cin >> N;
+//	for (int i = 0; i < N; i++) {
+//		int d, w;
+//		cin >> d >> w;
+//		pq.push({ w,-d });
+//	}
+//
+//	while (!pq.empty()) {
+//		int day = -pq.top().second;
+//		int score = pq.top().first;
+//		pq.pop();
+//
+//		for (int i = day; i >= 1; i--) {
+//			if (!is_visit[i]) {
+//				is_visit[i] = true;
+//				cnt += score;
+//				break;
+//			}
+//		}
+//	}
+//	cout << cnt << "\n";
+//}
