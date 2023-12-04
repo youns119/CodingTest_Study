@@ -21,7 +21,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BOJ\Q25_16235_unsolved3.cpp">
+    <ClCompile Include="BOJ\Q28_1715.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
