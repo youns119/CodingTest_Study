@@ -7,7 +7,6 @@ using namespace std;
 void Input(vector<int>& parent, vector<vector<int>>& party);
 int GetRoot(vector<int>& parent, int x);
 void Union(vector<int>& parent, int x, int y);
-bool Find(vector<int>& parent, int x, int y);
 int CntLie(vector<int>& parent, vector<vector<int>>& party);
 
 int main()
@@ -71,15 +70,6 @@ void Union(vector<int>& parent, int x, int y)
 			parent[x] = y;
 	}
 	else return;
-}
-
-bool Find(vector<int>& parent, int x, int y)
-{
-	x = GetRoot(parent, x);
-	y = GetRoot(parent, y);
-
-	if (x == y) return true;
-	else return false;
 }
 
 int CntLie(vector<int>& parent, vector<vector<int>>& party)
