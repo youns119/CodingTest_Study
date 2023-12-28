@@ -89,3 +89,7 @@ void IsConsist(vector<string>& numbers, vector<string>& answers)
 //
 //	return 0;
 //}
+
+// TRIE Ç®ÀÌ
+// https://ansohxxn.github.io/boj/5052/
+// https://www.crocus.co.kr/1053
