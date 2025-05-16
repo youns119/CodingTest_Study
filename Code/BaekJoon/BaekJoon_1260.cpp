@@ -11,6 +11,9 @@ void BFS(vector<vector<int>>& vecGraph, int iVertex);
 
 int main()
 {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+
 	vector<vector<int>> vecGraph;
 	int N{}, M{}, V{};
 
