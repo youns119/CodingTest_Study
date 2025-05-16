@@ -65,17 +65,22 @@ int Scoville(vector<int> scoville, int K)
 
 // 다른 사람의 풀이
 // vector의 값을 priority_queue에 복사하는 방법이 특이하다
-//int solution(vector<int> scoville, int K) {
-//	int answer = 0;
-//	int needHot;
-//	priority_queue<int, vector<int>, greater<int>> pq(scoville.begin(), scoville.end());
-//
-//	while (pq.top() < K) {
-//		if (pq.size() == 1) return answer = -1;
-//		needHot = pq.top(); pq.pop();
-//		pq.push(needHot + pq.top() * 2);
-//		pq.pop(); answer++;
-//	}
-//
-//	return answer;
-//}
+
+#ifdef _RELEASE
+
+int solution(vector<int> scoville, int K) {
+	int answer = 0;
+	int needHot;
+	priority_queue<int, vector<int>, greater<int>> pq(scoville.begin(), scoville.end());
+
+	while (pq.top() < K) {
+		if (pq.size() == 1) return answer = -1;
+		needHot = pq.top(); pq.pop();
+		pq.push(needHot + pq.top() * 2);
+		pq.pop(); answer++;
+	}
+
+	return answer;
+}
+
+#endif
