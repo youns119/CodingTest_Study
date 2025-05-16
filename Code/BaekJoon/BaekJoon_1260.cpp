@@ -6,8 +6,6 @@
 
 using namespace std;
 
-const int MAX = 1001;
-
 void DFS(vector<vector<int>>& vecGraph, int iVertex);
 void BFS(vector<vector<int>>& vecGraph, int iVertex);
 
