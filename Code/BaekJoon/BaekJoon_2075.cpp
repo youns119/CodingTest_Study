@@ -8,7 +8,7 @@ int main()
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	priority_queue<int, vector<int>, greater<int>> queueTable;
+	priority_queue<int, vector<int>, greater<int>> pqTable;
 
 	int N{};
 	cin >> N;
@@ -18,13 +18,13 @@ int main()
 		int iNum{};
 
 		cin >> iNum;
-		queueTable.push(iNum);
+		pqTable.push(iNum);
 
 		if (i >= N)
-			queueTable.pop();
+			pqTable.pop();
 	}
 
-	cout << queueTable.top();
+	cout << pqTable.top();
 
 	return 0;
 }
