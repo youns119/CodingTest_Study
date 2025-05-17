@@ -61,3 +61,48 @@ int main()
 
 	return 0;
 }
+
+#ifdef _RELEASE
+
+#include <iostream>
+#include <vector>
+#include <map>
+#include <algorithm>
+#include <string>
+
+using namespace std;
+
+bool compare(const pair<string, int>& a, const pair<string, int>& b) {
+	if (a.second == b.second) {
+		return a.first < b.first;
+	}
+	return a.second > b.second;
+}
+
+int main() {
+	int N, K;
+	cin >> N >> K;
+
+	map<string, int> freq_map;
+
+	for (int i = 0; i < N; i++) {
+		string word;
+		cin >> word;
+
+		if (word.size() >= K) {
+			freq_map[word]++;
+		}
+	}
+
+	vector<pair<string, int>> words(freq_map.begin(), freq_map.end());
+
+	sort(words.begin(), words.end(), compare);
+
+	for (const auto& entry : words) {
+		cout << entry.first << " ";
+	}
+
+	return 0;
+}
+
+#endif
