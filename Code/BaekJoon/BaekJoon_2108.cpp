@@ -84,3 +84,65 @@ void Print_Range(vector<int>& vecNumber)
 {
 	cout << vecNumber[vecNumber.size() - 1] - vecNumber[0] << "\n";
 }
+
+// 그냥 한 번에 vector랑 map에 값을 다 입력받는 방법
+// 가독성은 좀 떨어지지만 확실히 더 빠르긴하다
+
+#ifdef _RELEASE
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <map>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+
+    vector<int> numbers(N);
+    map<int, int> freq_map;
+
+    for (int i = 0; i < N; i++) {
+        cin >> numbers[i];
+        freq_map[numbers[i]]++;
+    }
+
+    sort(numbers.begin(), numbers.end());
+
+    int sum = 0;
+    for (int num : numbers) {
+        sum += num;
+    }
+    int average = round((float)sum / N);
+
+    int median = numbers[N / 2];
+
+    int mode = numbers[0];
+    int max_count = 1;
+    bool second_mode = false;
+    for (auto& entry : freq_map) {
+        if (entry.second > max_count) {
+            max_count = entry.second;
+            mode = entry.first;
+            second_mode = false;
+        }
+        else if (entry.second == max_count && !second_mode) {
+            mode = entry.first;
+            second_mode = true;
+        }
+    }
+
+    int range = numbers[N - 1] - numbers[0];
+
+    cout << average << endl;
+    cout << median << endl;
+    cout << mode << endl;
+    cout << range << endl;
+
+    return 0;
+}
+
+#endif

@@ -24,5 +24,14 @@
     <ClCompile Include="..\Code\BaekJoon\BaekJoon_2108.cpp">
       <Filter>00. BaekJoon</Filter>
     </ClCompile>
+    <ClCompile Include="..\Code\BaekJoon\BaekJoon_13305.cpp">
+      <Filter>00. BaekJoon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Code\Programmers\Programmers_62048.cpp">
+      <Filter>01. Programmers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Code\BaekJoon\BaekJoon_20920.cpp">
+      <Filter>00. BaekJoon</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
