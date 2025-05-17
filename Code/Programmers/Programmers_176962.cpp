@@ -66,8 +66,15 @@ vector<string> solution(vector<vector<string>> plans)
 		return tA.iStart < tB.iStart;
 		});
 
-	for (int i = vecTask.size() - 1; i >= 0; i--)
-		stTask.push(vecTask[i]);
+	for (int i = 0; i < vecTask.size(); i++)
+	{
+		Task tCurrTask = vecTask[i];
+
+		int iCurrEndTime = tCurrTask.iStart + tCurrTask.iTime;
+		int iNextStartTime = vecTask[i + 1].iStart;
+
+
+	}
 
 	while (!stTask.empty() && stTask.size() != 1)
 	{
