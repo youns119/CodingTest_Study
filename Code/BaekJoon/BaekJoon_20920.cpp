@@ -62,6 +62,10 @@ int main()
 	return 0;
 }
 
+// map과 vector만 사용한 방법
+// map의 값들을 vector에 바로 복사하는 방식이 신기함
+// string 끼리의 알파벳순 비교는 바로바로 되는지 처음 알았음
+
 #ifdef _RELEASE
 
 #include <iostream>
