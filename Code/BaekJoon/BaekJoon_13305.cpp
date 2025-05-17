@@ -40,3 +40,47 @@ int main()
 
 	return 0;
 }
+
+// vector<pair<int, int>> 대신 vector를 두 개 써서 푸는 방법
+// 그 외에는 비슷하다
+
+#ifdef _RELEASE
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+
+    vector<int> dist(n - 1);
+    vector<int> price(n);
+
+    for (int i = 0; i < n - 1; i++) {
+        cin >> dist[i];
+    }
+
+    for (int i = 0; i < n; i++) {
+        cin >> price[i];
+    }
+
+    long long totalCost = 0;
+    int currentPrice = price[0];
+
+    for (int i = 0; i < n - 1; i++) {
+        if (price[i] < currentPrice) {
+            currentPrice = price[i];
+        }
+
+        totalCost += (long long)currentPrice * dist[i];
+    }
+
+    cout << totalCost << endl;
+
+    return 0;
+}
+
+#endif
