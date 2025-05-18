@@ -8,6 +8,9 @@ long long solution(int w, int h);
 
 int main() 
 {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     int iWidth, iHeight;
     cin >> iWidth >> iHeight;
 

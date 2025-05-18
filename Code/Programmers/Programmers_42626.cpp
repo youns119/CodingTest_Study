@@ -10,6 +10,9 @@ int Scoville(vector<int> scoville, int K);
 
 int main()
 {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+
 	vector<int> scoville;
 
 	pqGreater pqScoville;
