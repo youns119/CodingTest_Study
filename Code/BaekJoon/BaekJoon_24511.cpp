@@ -47,3 +47,67 @@ int main()
 
 	return 0;
 }
+
+// vector만을 사용한 풀이
+// deque를 쓰는게 더 편할 것 같다
+
+#ifdef _RELEASE
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+void QueueStack(vector<pair<int, int>>& vecQS, int iNum);
+
+int main() {
+    int iCount;
+    cin >> iCount;
+
+    vector<pair<int, int>> vecQS(iCount);
+
+    for (int i = 0; i < iCount; i++) {
+        int iQS;
+        cin >> iQS;
+        vecQS[i].first = iQS;
+    }
+
+    for (int i = 0; i < iCount; i++) {
+        int iNum;
+        cin >> iNum;
+        vecQS[i].second = iNum;
+    }
+
+    int qCount;
+    cin >> qCount;
+
+    for (int i = 0; i < qCount; i++) {
+        int iNum;
+        cin >> iNum;
+        QueueStack(vecQS, iNum);
+    }
+
+    return 0;
+}
+
+void QueueStack(vector<pair<int, int>>& vecQS, int iNum) {
+    vector<int> stack;
+    vector<int> queue;
+
+    for (auto& qs : vecQS) {
+        if (qs.first == iNum) {
+            stack.push_back(qs.second);
+        }
+    }
+
+    for (int i = 0; i < stack.size(); i++) {
+        queue.push_back(stack[i]);
+    }
+
+    for (int i = 0; i < queue.size(); i++) {
+        cout << queue[i] << " ";
+    }
+    cout << endl;
+}
+
+#endif
