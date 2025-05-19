@@ -96,5 +96,8 @@
     <ClCompile Include="..\Code\BaekJoon\BaekJoon_1929.cpp">
       <Filter>00. BaekJoon\2025\05\19</Filter>
     </ClCompile>
+    <ClCompile Include="..\Code\BaekJoon\BaekJoon_1735.cpp">
+      <Filter>00. BaekJoon\2025\05\19</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
