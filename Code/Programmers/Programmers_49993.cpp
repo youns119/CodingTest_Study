@@ -8,6 +8,9 @@ int solution(string skill, vector<string> skill_trees);
 
 int main()
 {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     string strSkill{};
 
     cin >> strSkill;
