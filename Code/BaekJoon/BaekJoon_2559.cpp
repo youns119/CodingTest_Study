@@ -40,6 +40,11 @@ int main()
 	return 0;
 }
 
+// max 함수 써서 푸는 방법
+// 사실상 별 차이는 없다
+// 굳이 장점이라면 vector 컨테이너 하나 덜 쓰는거랑 sort 함수 써서 정렬할 필요 없는거?
+// sort 함수 써서 정렬하는 것도 사실 귀찮아서 그렇게 한거지 위의 풀이도 max 구하는 식으로 충분히 가능
+
 #ifdef _RELEASE
 
 #include <iostream>
