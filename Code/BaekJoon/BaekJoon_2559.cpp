@@ -12,12 +12,12 @@ int main()
 	int iDay{}, iCons{};
 
 	cin >> iDay >> iCons;
-	vector<int> vecDay(iDay);
+	vector<int> vecDay(iDay + 1);
 	
 	vector<int> vecSum;
 	int iSum{};
 
-	for (int i = 0; i < iDay; i++)
+	for (int i = 1; i < iDay + 1; i++)
 	{
 		cin >> vecDay[i];
 		iSum += vecDay[i];
