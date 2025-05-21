@@ -57,3 +57,53 @@ int BFS(const vector<vector<int>>& vecGraph, int iStart)
 	
 	return iResult;
 }
+
+// BFS 대신 DFS를 사용하는 방법
+// 사실상 모든 노드를 탐색해야 하기 때문에 별 차이는 없다
+// 얍삽하게 마지막 결과값에서 -1 해버리네...ㅋㅋㅅㅂ 똑똑하네
+
+#ifdef _RELEASE
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int MAX = 101;
+vector<int> graph[MAX];
+bool visited[MAX];
+int infected = 0;
+
+void DFS(int node) {
+	visited[node] = true;
+	infected++;
+
+	for (int next : graph[node]) {
+		if (!visited[next]) {
+			DFS(next);
+		}
+	}
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+
+	int n, m;
+	cin >> n >> m;
+
+	for (int i = 0; i < m; i++) {
+		int u, v;
+		cin >> u >> v;
+
+		graph[u].push_back(v);
+		graph[v].push_back(u);
+	}
+
+	DFS(1);
+
+	cout << infected - 1 << "\n";
+	return 0;
+}
+
+#endif
