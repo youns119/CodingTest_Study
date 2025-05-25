@@ -73,6 +73,7 @@
     <ClCompile Include="..\Code\BaekJoon\BaekJoon_2606.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\Code\BaekJoon\BaekJoon_3273.cpp" />
     <ClCompile Include="..\Code\BaekJoon\BaekJoon_4779.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
