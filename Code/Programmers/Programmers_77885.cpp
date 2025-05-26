@@ -94,6 +94,9 @@ vector<long long> solution(vector<long long> numbers)
 
 // 속도는 마찬가지로 다른 풀이들과 비슷하지만 가장 비트연산을 잘 활용한 방법
 // 생각해낸 사람의 머리 속이 궁금한 풀이
+// n & -n 은 가장 오른쪽 1비트만 남기는 식
+// 따라서 ~n & -~n 은 가장 오른쪽 0비트를 찾아내는 식이다
+// 매우 유용할 것 같다 기억해두자
 
 #ifdef _RELEASE
 
