@@ -69,8 +69,10 @@ vector<long long> solution(vector<long long> numbers)
 	return answer;
 }
 
-//
-//하지만 코드가 더 간결하다
+// 기본적으로 위의 모든 과정을 비트연산자로 바꾼 거라고 보는 되는 풀이
+// 하지만 코드가 더 간결하다
+// 기왕 하는 김에 push_back 안의 식도 비트 연산자로 하면 더 좋지 않을까 하는 생각도 있다
+// (number | bit) & ~(bit >> 1) 이런식으로 바꿀 수 있을 듯
 
 #ifdef _RELEASE
 
@@ -90,8 +92,8 @@ vector<long long> solution(vector<long long> numbers)
 
 #endif
 
-//속도는 마찬가지로 다른 풀이들과 비슷하지만 가장 비트연산을 잘 활용한 방법
-//어떻게 생각해 냈는지도 모르겠고 이해하기도 힘들다... 
+// 속도는 마찬가지로 다른 풀이들과 비슷하지만 가장 비트연산을 잘 활용한 방법
+// 생각해낸 사람의 머리 속이 궁금한 풀이
 
 #ifdef _RELEASE
 
