@@ -24,6 +24,7 @@ int main()
 
 		cin >> iNum1 >> iNum2;
 		vecWire[iNum1].push_back(iNum2);
+		vecWire[iNum2].push_back(iNum1);
 	}
 
 	cout << solution(iCount, vecWire);
