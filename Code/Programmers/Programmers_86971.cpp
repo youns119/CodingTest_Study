@@ -71,6 +71,8 @@ int solution(int n, vector<vector<int>> wires)
 	qWire.push(1);
 	vecVisit[1] = true;
 
+	for(int i = 0)
+
 	while (!qWire.empty())
 	{
 		int iWire = qWire.front();
