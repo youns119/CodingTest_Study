@@ -87,7 +87,11 @@ int solution(int n, vector<vector<int>> wires)
 	return answer;
 }
 
-// 
+// 충격적인 풀이
+// 우선 dfs를 function을 이용한 것도 충격, 단방향 dfs를 구현하는 방법도 충격
+// 이렇게 하면 서브트리의 크기를 한 번의 순회로 모두 구해놓을 수 있다
+// 굳이 function을 사용하는 이유는 람다식은 익명의 함수이기 때문에 자기자신을 호출하는 재귀가 불가능하기 때문
+// 정말 정말 해석하는데도 오래 걸리고 자신의 부족함을 알게 되는 풀이었다...
 
 #ifdef _RELEASE
 
@@ -126,39 +130,12 @@ int solution(int n, vector<vector<int>> wires) {
 
 #endif
 
+// 위의 풀이와 비슷
+// 단방향 dfs, 서브 트리의 크기를 모두 구해놓는 것까지 비슷
+// 차이점은 function이 아닌 함수로 dfs를 따로 빼놓은 것, 그래프에 고정 크기 배열을 사용한 것 정도
+
 #ifdef _RELEASE
 
-
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
 #include <string>
 #include <vector>
 
