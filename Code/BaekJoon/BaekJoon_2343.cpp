@@ -15,35 +15,41 @@ int main()
 	cin >> iLesson >> iBluray;
 	vector<int> vecLesson(iLesson);
 
+	int iMaxLen{}, iTotalLen{};
+
 	for (int i = 0; i < iLesson; i++)
+	{
 		cin >> vecLesson[i];
 
-	vector<int> vecSize(iLesson);
-	function<void(int)> dfs = [&](int iCurr)
-		{
-			vecSize[iCurr] = vecLesson[iCurr];
+		iMaxLen = max(iMaxLen, vecLesson[i]);
+		iTotalLen += vecLesson[i];
+	}
 
-			if (iCurr + 1 < iLesson)
-			{
-				dfs(iCurr + 1);
-				vecSize[iCurr] += vecSize[iCurr + 1];
-			}
-		};
+	int iLeft = iMaxLen, iRight = iTotalLen;
+	int iResult = iRight;
 
-	dfs(0);
-
-	int iResult = vecSize[0];
-	for (int i = 1; i < iLesson - 1; i++)
+	while (iLeft <= iRight)
 	{
-		for (int j = i + 1; j < iLesson; j++)
-		{
-			int iSum1 = vecSize[0];
-			int iSum2 = vecSize[i];
-			int iSum3 = vecSize[j];
+		int iMid = (iLeft + iRight) / 2;
+		int iCount{ 1 }, iSum{};
 
-			int iMax = max(iSum1 - iSum2, max(iSum2 - iSum3, iSum3));
-			iResult = min(iResult, iMax);
+		for (int i = 0; i < iLesson; i++)
+		{
+			if (iSum + vecLesson[i] > iMid)
+			{
+				iCount++;
+				iSum = 0;
+			}
+
+			iSum += vecLesson[i];
 		}
+
+		if (iCount <= iBluray)
+		{
+			iResult = iMid;
+			iRight = iMid - 1;
+		}
+		else iLeft = iMid + 1;
 	}
 
 	cout << iResult;
