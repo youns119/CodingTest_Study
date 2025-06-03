@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <algorithm>
 #include <cmath>
 
 using namespace std;
@@ -87,47 +86,50 @@ int solution(string s)
 
 #endif
 
-// GPT가 Manacher's Algorithm으로 나한테 알려준 풀이법
+// GPT가 Manacher's Algorithm으로 나한테 알려준 것을 내 방식으로 풀어낸 코드
 // 마나허 알고리즘이란 걸 처음 알았고 이해하는데 너무 오래 걸림...
 // 시간복잡도가 O(N)이라서 위의 Two Pointer보다 훨씬 빠르다
 // 기본적으로 DP의 로직을 따르고 있다
 
 #ifdef _RELEASE
 
-int solution(string s) {
-	// 1. 전처리: 홀수 길이로 만들기
-	string t = "#";
-	for (char c : s) {
-		t += c;
-		t += "#";
+int solution(string s)
+{
+	int answer = 0;
+
+	string strPal{ "#" };
+
+	for (char chPal : s)
+	{
+		strPal += chPal;
+		strPal += '#';
 	}
 
-	int n = t.size();
-	vector<int> p(n, 0); // 각 위치의 반지름 길이
-	int c = 0, r = 0;    // 중심과 오른쪽 끝
-	int maxLen = 0;
+	int iLen = strPal.length();
+	vector<int> vecPal(iLen);
+	int iCenter{}, iRight{};
 
-	for (int i = 0; i < n; ++i) {
-		int mirror = 2 * c - i; // i의 거울 위치
+	for (int i = 0; i < iLen; i++)
+	{
+		int iMirror = 2 * iCenter - i;
 
-		if (i < r)
-			p[i] = min(r - i, p[mirror]);
+		if (i < iRight)
+			vecPal[i] = min(iRight - i, vecPal[iMirror]);
 
-		// 중심에서 확장
-		while (i - p[i] - 1 >= 0 && i + p[i] + 1 < n && t[i - p[i] - 1] == t[i + p[i] + 1]) {
-			++p[i];
+		while (i - vecPal[i] - 1 >= 0 && i + vecPal[i] + 1 < iLen &&
+			strPal[i - vecPal[i] - 1] == strPal[i + vecPal[i] + 1])
+			vecPal[i]++;
+
+		if (i + vecPal[i] > iRight)
+		{
+			iCenter = i;
+			iRight = i + vecPal[i];
 		}
 
-		// r과 c 갱신
-		if (i + p[i] > r) {
-			c = i;
-			r = i + p[i];
-		}
-
-		maxLen = max(maxLen, p[i]);
+		answer = max(answer, vecPal[i]);
 	}
 
-	return maxLen;
+	return answer;
 }
 
 #endif
