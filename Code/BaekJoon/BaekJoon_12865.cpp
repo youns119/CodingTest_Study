@@ -13,6 +13,7 @@ int main()
 
 	cin >> iCnt >> iMaxWeight;
 	vector<int> vecWeight(iCnt);
+	vector<int> vecValue(iCnt);
 	vector<int> vecDP(iMaxWeight + 1);
 
 	for (int i = 0; i < iCnt; i++)
@@ -21,11 +22,12 @@ int main()
 
 		cin >> iWeight >> iValue;
 		vecWeight[i] = iWeight;
-		vecDP[iWeight] = iValue;
+		vecValue[i] = iValue;
 	}
 
 	for (int i = 0; i < iCnt; i++)
-		vecDP[iMaxWeight] = max(vecDP[iMaxWeight], vecDP[vecWeight[i]] + vecDP[iMaxWeight - vecWeight[i]]);
+		for (int j = iMaxWeight; j >= vecWeight[i]; j--)
+			vecDP[j] = max(vecDP[j], vecDP[j - vecWeight[i]] + vecValue[i]);
 
 	cout << vecDP[iMaxWeight];
 
