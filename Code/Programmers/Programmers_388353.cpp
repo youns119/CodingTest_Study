@@ -40,24 +40,24 @@ int Fork(vector<string>& vecStorage, char chReq)
 	int iResult{};
 	pair<int, int> pairNext[4] = { {-1, 0}, {1, 0}, {0, -1}, {0, 1} };
 	vector<pair<int, int>> vecResult;
+	vector<vector<bool>> vecVisit(vecStorage.size(), vector<bool>(vecStorage[0].size(), false));
 
-	function<bool(pair<int, int>, pair<int, int>)> dfs =
-		[&](pair<int, int> pairCurr, pair<int, int> pairPrev) -> bool
+	function<bool(pair<int, int>)> dfs =
+		[&](pair<int, int> pairCurr) -> bool
 		{
+			vecVisit[pairCurr.first][pairCurr.second] = true;
+
 			for (int i = 0; i < 4; i++)
 			{
 				int iFirst = pairCurr.first + pairNext[i].first;
 				int iSecond = pairCurr.second + pairNext[i].second;
 
-				if (iFirst == pairPrev.first && iSecond == pairPrev.second)
-					continue;
-
 				if (iFirst < 0 || iFirst >= vecStorage.size() ||
 					iSecond < 0 || iSecond >= vecStorage[0].size())
 					return true;
-				else if (vecStorage[iFirst][iSecond] == '@')
+				else if (vecStorage[iFirst][iSecond] == '@' && !vecVisit[iFirst][iSecond])
 				{
-					bool bFinish = dfs({ iFirst, iSecond }, pairCurr);
+					bool bFinish = dfs({ iFirst, iSecond });
 					if (bFinish) return true;
 				}
 				else continue;
@@ -72,8 +72,11 @@ int Fork(vector<string>& vecStorage, char chReq)
 		{
 			if (vecStorage[i][j] == chReq)
 			{
-				bool bFinish = dfs({ i, j }, { i, j });
+				bool bFinish = dfs({ i, j });
 				if (bFinish) vecResult.push_back({ i, j });
+
+				for (auto& Visit : vecVisit)
+					fill(Visit.begin(), Visit.end(), false);
 			}
 		}
 	}
