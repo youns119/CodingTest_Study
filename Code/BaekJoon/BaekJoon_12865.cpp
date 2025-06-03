@@ -17,13 +17,7 @@ int main()
 	vector<int> vecDP(iMaxWeight + 1);
 
 	for (int i = 0; i < iCnt; i++)
-	{
-		int iWeight{}, iValue{};
-
-		cin >> iWeight >> iValue;
-		vecWeight[i] = iWeight;
-		vecValue[i] = iValue;
-	}
+		cin >> vecWeight[i] >> vecValue[i];
 
 	for (int i = 0; i < iCnt; i++)
 		for (int j = iMaxWeight; j >= vecWeight[i]; j--)
