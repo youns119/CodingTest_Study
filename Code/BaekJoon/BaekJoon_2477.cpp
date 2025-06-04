@@ -47,9 +47,8 @@ int main()
 	return 0;
 }
 
-// 좌표를 사용한 풀이 방법
+// 2차원 좌표를 사용한 풀이 방법
 // Shoelace 공식이란 걸 사용하는 듯하다
-// 수학적 공식인데 솔직히 뭐
 
 #ifdef _RELEASE
 
@@ -93,6 +92,49 @@ int main()
 	}
 
 	area = abs(area) / 2;
+
+	cout << area * k;
+	return 0;
+}
+
+#endif
+
+// 위의 방법을 더 최적화한 방식
+// 공부가 필요하다...
+
+#ifdef _RELEASE
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+
+	int k;
+	cin >> k;
+
+	int dx[7] = { 0 }; // x 변화량
+	int y = 0;       // 현재 y 좌표
+	int area = 0;
+
+	for (int i = 1; i <= 6; i++) {
+		int dir, len;
+		cin >> dir >> len;
+
+		// x 방향 변화량 저장
+		if (dir == 1) dx[i] = len;       // 동
+		else if (dir == 2) dx[i] = -len; // 서
+		else dx[i] = 0;                  // 남북은 x 변화 없음
+
+		// y 좌표 변화
+		if (dir == 3) y -= len;          // 남
+		else if (dir == 4) y += len;     // 북
+
+		// 누적 면적 (x변화량 * 현재 y좌표)
+		area += -dx[i] * y;
+	}
 
 	cout << area * k;
 	return 0;
