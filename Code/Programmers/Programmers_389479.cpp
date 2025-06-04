@@ -27,7 +27,21 @@ int solution(vector<int> players, int m, int k)
 {
 	int answer = 0;
 
+	vector<int> vecServer(players.size());
 
+	for (int i = 0; i < players.size(); i++)
+	{
+		int iReq = players[i] / m;
+
+		if (vecServer[i] < iReq)
+			for (int j = i; j < i + k && j < vecServer.size(); j++)
+			{
+				int iDist = iReq - vecServer[i];
+
+				vecServer[j] += iDist;
+				answer += iDist;
+			}
+	}
 
 	return answer;
 }
