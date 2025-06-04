@@ -34,14 +34,45 @@ int solution(vector<int> players, int m, int k)
 		int iReq = players[i] / m;
 
 		if (vecServer[i] < iReq)
-			for (int j = i; j < i + k && j < vecServer.size(); j++)
-			{
-				int iDist = iReq - vecServer[i];
+		{
+			int iDist = iReq - vecServer[i];
+			answer += iDist;
 
+			for (int j = i; j < i + k && j < vecServer.size(); j++)
 				vecServer[j] += iDist;
-				answer += iDist;
-			}
+		}
 	}
 
 	return answer;
 }
+
+#ifdef _RELEASE
+
+#include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+int solution(vector<int> players, int m, int k)
+{
+	int answer = 0;
+	queue<int> q;
+	for (int i = 0; i < players.size(); i++)
+	{
+		// 서버 시간 체크
+		while (!q.empty() && i - q.front() >= k)
+		{
+			q.pop();
+		}
+
+		// 현재 이용자 수가 (n+1) * m명 이상이면 서버 증설
+		while (players[i] >= (q.size() + 1) * m)
+		{
+			++answer;
+			q.push(i);
+		}
+	}
+	return answer;
+}
+
+#endif
