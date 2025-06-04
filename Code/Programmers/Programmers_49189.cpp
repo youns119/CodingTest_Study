@@ -40,7 +40,7 @@ int solution(int n, vector<vector<int>> edge)
 	}
 
 	queue<int> qBFS;
-	vector<int> vecMin(n + 1);
+	vector<int> vecMin(n + 1, -1);
 
 	qBFS.push(1);
 	vecMin[1]++;
@@ -55,7 +55,7 @@ int solution(int n, vector<vector<int>> edge)
 			int iCurrRank = vecMin[iCurr] + 1;
 			int iCurrNode = vecGraph[iCurr][i];
 
-			if (vecMin[iCurrNode] == 0 || vecMin[iCurrNode] > iCurrRank)
+			if (vecMin[iCurrNode] == -1)
 			{
 				vecMin[iCurrNode] = iCurrRank;
 				qBFS.push(iCurrNode);
