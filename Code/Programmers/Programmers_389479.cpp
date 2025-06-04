@@ -46,11 +46,17 @@ int solution(vector<int> players, int m, int k)
 	return answer;
 }
 
+// queue를 사용하는 풀이
+// 오래된 순으로 서버의 시간을 체크하면서 queue에 push, pop을 하는 방식
+// 현재 서버 수는 queue의 size로 알 수 있다
+// 굉장히 효율적이고 재밌는 방식... 배울점이 많다
+
 #ifdef _RELEASE
 
 #include <iostream>
 #include <vector>
 #include <queue>
+
 using namespace std;
 
 int solution(vector<int> players, int m, int k)
