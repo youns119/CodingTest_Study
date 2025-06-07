@@ -23,7 +23,7 @@ int solution(int n)
 {
 	int answer = 0;
 
-	function<void(int iLeft, int iRight)> DFS = [&](int iLeft, int iRight)
+	function<void(int, int)> DFS = [&](int iLeft, int iRight)
 		{
 			if (iLeft == n && iRight == n)
 			{
