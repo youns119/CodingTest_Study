@@ -102,6 +102,9 @@ int solution(vector<string> board)
 	return answer;
 }
 
+// 아예 pair<int, int>를 Coord로 치환해서 사실상 pair<pair<int, int>, int>> 형식으로 썼다
+// 또한 BFS 내부 반복문에서 for문 내의 while문 내부가 깔끔하다... 나는 왜 이 생각을 못했을까!
+
 #ifdef _RELEASE
 
 #include <string>
