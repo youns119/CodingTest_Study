@@ -20,9 +20,9 @@ int main()
 
 	while (iCase--)
 	{
-		cin >> iRow >> iCol >> iCnt;
+		cin >> iCol >> iRow >> iCnt;
 
-		vector<vector<int>> vecField(iRow, vector<int>(iCol, 0));
+		vector<vector<int>> vecField(iCol, vector<int>(iRow, 0));
 
 		while (iCnt--)
 		{
