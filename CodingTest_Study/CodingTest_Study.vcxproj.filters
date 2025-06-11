@@ -255,5 +255,8 @@
     <ClCompile Include="..\Code\Programmers\Programmers_42628.cpp">
       <Filter>01. Programmers\2025\06\11</Filter>
     </ClCompile>
+    <ClCompile Include="..\Code\Programmers\Programmers_72413.cpp">
+      <Filter>01. Programmers\2025\06\11</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
