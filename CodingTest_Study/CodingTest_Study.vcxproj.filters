@@ -112,6 +112,9 @@
     <Filter Include="01. Programmers\2025\06\12">
       <UniqueIdentifier>{c37fe97f-0241-4669-80c3-be8f460506a9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01. Programmers\2025\06\14">
+      <UniqueIdentifier>{62470849-ecc4-4e22-97b3-a538e4b86078}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Code\BaekJoon\BaekJoon_1260.cpp">
@@ -266,6 +269,9 @@
     </ClCompile>
     <ClCompile Include="..\Code\Programmers\Programmers_12942.cpp">
       <Filter>01. Programmers\2025\06\12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Code\Programmers\Programmers_12927.cpp">
+      <Filter>01. Programmers\2025\06\14</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
