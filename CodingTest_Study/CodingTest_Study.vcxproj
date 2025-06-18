@@ -125,6 +125,7 @@
     <ClCompile Include="..\Code\Programmers\Programmers_169199.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\Code\Programmers\Programmers_17676.cpp" />
     <ClCompile Include="..\Code\Programmers\Programmers_17680.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
